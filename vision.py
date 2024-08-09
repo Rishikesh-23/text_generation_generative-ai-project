@@ -11,7 +11,7 @@ from PIL import Image
 genai.configure(api_key= os.getenv("GOOGLE_API_KEY"))
 
 ##FUNCTION TO LOAD GEMINI PRO MODEL AND GET RESPONSES
-model = genai.GenerativeModel("gemini-pro-vision")
+model = genai.GenerativeModel("gemini-1.5-flash")
 def get_gemini_response(input,image):
     if input!="" :
         response=model.generate_content([input,image])
@@ -20,7 +20,7 @@ def get_gemini_response(input,image):
     return response.text
 
 st.set_page_config(page_title = "image demonstrator app " )
-st.header("Image demonstrator application powered by Gemini | Built by Rishi")
+st.header("Image demonstrator application powered by Google Gemini | Built by Rishi")
 input = st.text_input("Input: ", key="input")
 
 uploaded_file = st.file_uploader("choose an image..", type=[ "jpg", "jpeg" , "png" ]) 
