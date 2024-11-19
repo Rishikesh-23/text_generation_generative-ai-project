@@ -1,4 +1,4 @@
-Gemini AI-Powered Applications
+# Gemini AI-Powered Applications
 
 ## Table of Contents
 1. [Project Title](#project-title)
